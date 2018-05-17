@@ -43,7 +43,7 @@ def train(epoch):
 				nll_loss.data[0] / batch_size))
 
 			sample = model.sample(28)
-			plt.imshow(sample.numpy())
+			plt.imsave('sample.png',sample.numpy())
 			plt.pause(1e-6)
 
 		train_loss += loss.data[0]

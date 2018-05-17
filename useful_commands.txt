@@ -1,0 +1,2 @@
+- To save image instead of show
+    plt.imsave('test.png', image)
