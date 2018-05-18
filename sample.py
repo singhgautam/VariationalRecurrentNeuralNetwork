@@ -14,6 +14,6 @@ model = VRNN(x_dim, h_dim, z_dim, n_layers)
 model.load_state_dict(state_dict)
 
 sample = model.sample(28*6)
-plt.imsave('sample_sample.py', sample.numpy(), cmap='gray')
+plt.imsave('sample_sample.png', sample.numpy(), cmap='gray')
 # plt.imshow(sample.numpy(), cmap='gray')
 # plt.show()
