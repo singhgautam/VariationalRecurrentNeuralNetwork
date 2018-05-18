@@ -159,9 +159,8 @@ class VRNN(nn.Module):
 
 
 	def _repackage_state(self, h):
-		print 'type(h)=', type(h)
-		if type(h) == Variable:
-			return Variable(h.data)
+		if type(h) == torch.Tensor:
+			return Variable(h)
 		else:
 			return tuple(self._repackage_state(v) for v in h)
 	
