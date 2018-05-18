@@ -159,6 +159,7 @@ class VRNN(nn.Module):
 
 
 	def _repackage_state(self, h):
+		print 'type(h)=', type(h)
 		if type(h) == Variable:
 			return Variable(h.data)
 		else:
